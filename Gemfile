@@ -21,6 +21,7 @@ gem 'ancestry-treeview'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'simple_form'
+gem 'haml'
 gem 'devise'
 gem 'prawn'
 gem "font-awesome-rails"
