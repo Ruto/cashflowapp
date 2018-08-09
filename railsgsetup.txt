@@ -1,0 +1,87 @@
+Smarterp Rails code generators
+
+gem 'ancestry'
+gem 'ancestry-treeview'
+gem 'bootstrap', '~> 4.1.1'
+gem 'jquery-rails'
+gem 'simple_form'
+gem 'devise'
+gem 'prawn'
+gem "font-awesome-rails"
+gem 'jquery-ui-rails'
+
+
+rails generate simple_form:install --bootstrap
+
+   optional use simple_form_for(@user, html: { class: 'form-inline' }) do |form|
+
+rails g devise:install
+
+    config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+rails g devise User
+
+group :test do
+  gem 'rspec-rails'
+  gem 'spring-commands-rspec'
+end
+
+bundle
+
+
+  config/appliation.rb
+
+  config.generators do |g|
+      g.test_framework :rspec,
+         fixtures: false,
+         view_specs: false,
+         helper_specs: false,
+         routing_specs: false
+    end
+
+rails g rspec:install
+bundle exec spring binstub rspec
+bin/rspec
+
+
+rake db:test:prepare
+bin rails db:create:all
+bin/rails g rspec:model company_structure
+bin/rails g rspec:controller company_structure
+
+bootstrap
+
+appliation.scss
+
+@import "bootstrap";
+
+
+application.js # add
+
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
+
+rails g scaffold cash amount:decimal cashtype:(inflow/outflow) category
+
+Operations Cashflow
+    Receipts from Debtors
+    Payment to Creditors
+    Sales
+    Purchases
+    Paying Expenses
+
+Investment Cashflow
+    Sales of assets
+    Fixed Deposit maturing
+
+    Money paid for replacing fixed assets(computers)
+    Money paid for buying new assets
+    Investing in fixed deposits
+
+Financing Activities Cashflow
+    Directors contributions
+    Bank Loan
+    Shares sales
+
+    Loan Repayment
