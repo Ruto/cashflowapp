@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
-## it time to check for conflict from local
+##Now that its worked i am fine
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
